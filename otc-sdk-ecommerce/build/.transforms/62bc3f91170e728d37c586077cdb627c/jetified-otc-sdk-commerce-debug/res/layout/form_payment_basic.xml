@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_form_payment_basic"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:shrinkColumns="*"
+    android:stretchColumns="*"
+    android:visibility="visible">
+
+    <TableRow
+        android:id="@+id/row_label_card"
+        android:layout_marginTop="3dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/label_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/otc_hint_card" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row_card"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:animateLayoutChanges="true"
+        android:gravity="center">
+
+        <com.otc.sdk.commerce.presentation.ui.custom.OtcInputField
+            android:id="@+id/card"
+            style="@style/OtcInput"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:longClickable="false"
+            android:layout_weight="2"
+            android:digits="0123456789 -_"
+            android:drawableStart="@drawable/otc_ic_card"
+            android:hint="@string/otc_hint_card"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLength="19"
+            android:nextFocusForward="@+id/date"
+            tools:ignore="RtlCompat" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row_label_date_cvv"
+        android:layout_marginTop="3dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/label_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/otc_hint_date" />
+
+        <TextView
+            android:id="@+id/label_cvv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/otc_hint_cvv" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row_date_cvv"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.otc.sdk.commerce.presentation.ui.custom.OtcInputField
+            android:id="@+id/date"
+            style="@style/OtcInput"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:longClickable="false"
+            android:layout_weight="2"
+            android:digits="0123456789/"
+            android:drawableStart="@drawable/otc_ic_date"
+            android:hint="@string/visanet_hint_mmyy"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLength="5"
+            android:visibility="visible" />
+
+        <com.otc.sdk.commerce.presentation.ui.custom.OtcInputField
+            android:id="@+id/cvv"
+            style="@style/OtcInput"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:longClickable="false"
+            android:layout_marginStart="6dp"
+            android:layout_weight="2"
+            android:digits="0123456789"
+            android:drawableEnd="@drawable/otc_ic_info"
+            android:drawableStart="@drawable/otc_ic_cvv"
+            android:hint="@string/otc_hint_cvv"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="3"
+            android:nextFocusForward="@+id/name" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row_label_name_lastname"
+        android:layout_marginTop="3dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/label_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/otc_hint_name" />
+
+        <TextView
+            android:id="@+id/label_last_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/otc_hint_last_name" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row_name_lastname"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center">
+
+        <com.otc.sdk.commerce.presentation.ui.custom.OtcInputField
+            android:id="@+id/name"
+            style="@style/OtcInput"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:longClickable="false"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="2"
+            android:drawableStart="@drawable/otc_ic_user"
+            android:hint="@string/otc_hint_name"
+            android:imeOptions="actionNext"
+            android:inputType="textNoSuggestions"
+            android:maxLength="25" />
+
+        <com.otc.sdk.commerce.presentation.ui.custom.OtcInputField
+            android:id="@+id/last_name"
+            style="@style/OtcInput"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:longClickable="false"
+            android:layout_marginStart="3dp"
+            android:layout_weight="2"
+            android:drawableStart="@drawable/otc_ic_user"
+            android:hint="@string/otc_hint_last_name"
+            android:imeOptions="actionNext"
+            android:inputType="textNoSuggestions"
+            android:maxLength="25" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row_label_email"
+        android:layout_marginTop="3dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/label_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/otc_hint_email" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row_email"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center">
+
+        <com.otc.sdk.commerce.presentation.ui.custom.OtcInputField
+            android:id="@+id/email"
+            style="@style/OtcInput"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:longClickable="false"
+            android:layout_weight="2"
+            android:drawableStart="@drawable/otc_ic_mail"
+            android:hint="@string/otc_hint_email"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:maxLength="75" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row_label_phone"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/label_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/otc_hint_phone" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row_phone"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <com.otc.sdk.commerce.presentation.ui.custom.OtcInputField
+            android:id="@+id/phone"
+            style="@style/OtcInput"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="4"
+            android:longClickable="false"
+            android:drawableStart="@drawable/otc_ic_phone"
+            android:hint="@string/otc_hint_phone"
+            android:digits="0123456789"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLength="12" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row_label_installments"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/label_installments"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/visanet_hint_installments" />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/pay"
+            style="@style/OtcBigButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/label_pay"
+            android:textAllCaps="false"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <include layout="@layout/foot"/>
+
+</TableLayout>
+
+
+

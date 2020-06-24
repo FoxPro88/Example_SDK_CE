@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:shrinkColumns="*"
+    android:stretchColumns="*">
+
+    <TableRow
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="3dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/label_logo"
+            android:scaleType="fitStart"
+            android:src="@drawable/otc_logo_pci" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:contentDescription="@string/label_logo"
+            android:scaleType="fitEnd"
+            android:src="@drawable/otc_logo_visa" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="3dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/sdk_version" />
+
+    </TableRow>
+
+</TableLayout>
+
+
+
